@@ -1,2 +1,0 @@
-# todo
-Custom Todo list

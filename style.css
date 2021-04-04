@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #fc00ff;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#00dbde), to(#fc00ff));
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  font-family: 'Poppins',sans-serif;
+  min-height: 100vh;
+}
+
+section {
+  height: 100vh;
+}
+
+section h1 {
+  text-transform: capitalize;
+}
+
+a:focus, button:focus, input:focus {
+  outline: none;
+}
+
+.reset {
+  text-align: end;
+  background-position: top;
+  padding: 0px 10px 10px 0px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  float: left;
+}
+
+.reset a {
+  text-decoration: none;
+  background-color: #fff;
+  color: #fc00ff;
+  padding: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.reset a:hover {
+  background-color: #fc00ff;
+  color: #fff;
+}
+
+header, form, .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 20vh;
+  font-size: 1.5rem !important;
+}
+
+header input, header button, form input, form button, .intro input, .intro button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #fff;
+}
+
+header input, form input, .intro input {
+  border-radius: 2rem 0 0 2rem;
+}
+
+header button, form button, .intro button {
+  color: #fc00ff;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  border-radius: 0 2rem 2rem 0;
+}
+
+header button:hover, form button:hover, .intro button:hover {
+  background: #fc00ff;
+  color: #fff;
+}
+
+header .select, form .select, .intro .select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem 0 0 2rem;
+}
+
+header .select select, form .select select, .intro .select select {
+  color: #fc00ff;
+  width: 10rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+header .select:hover::after, form .select:hover::after, .intro .select:hover::after {
+  background-color: #fff;
+  color: #fc00ff;
+}
+
+header .select::after, form .select::after, .intro .select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #fc00ff;
+  top: -0.5rem;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.intro {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.intro input {
+  color: #fc00ff;
+  border-radius: 2rem;
+  padding: 15px;
+}
+
+.intro button {
+  border-radius: 2rem;
+  margin: 20px;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.intro button:hover {
+  background: linear-gradient(120deg, #00dbde 50%, #fc00ff);
+}
+
+.todo {
+  margin: .5rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border-radius: 2rem 0 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 1rem;
+}
+
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.delete-btn, .complete-btn {
+  background: #fc00ff;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background-color: #49cc49;
+}
+
+.fa-trash, .fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.fall {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

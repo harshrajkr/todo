@@ -1,0 +1,191 @@
+//variables
+$colorPri: #fc00ff;
+$colorSec: #00dbde;
+$colorWhite: #fff;
+$colorBlack: #000;
+
+//mixins
+@mixin flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+//stylings
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fc00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: $colorWhite;
+    font-family: 'Poppins',sans-serif;
+    min-height: 100vh;
+}
+section{
+    height: 100vh;
+    h1{
+        text-transform:capitalize;
+    }
+}
+a:focus, button:focus, input:focus{
+    outline: none;
+}
+.reset{
+    text-align: end;
+    background-position: top;
+    padding: 0px 10px 10px 0px;
+    position: fixed;
+    right:0;
+    bottom:0;
+    float: left;
+    a{
+        text-decoration: none;
+        background-color: $colorWhite;
+        color: $colorPri;
+        padding: 5px;
+        transition: all .3s ease-in-out;
+        &:hover{
+            background-color: $colorPri;
+            color: $colorWhite;
+        }
+    }
+}
+
+header,form,.intro{
+    @include flex-c();
+    min-height: 20vh;
+    font-size: 1.5rem !important;
+
+    input,button{
+        padding: 0.5rem;
+        font-size: 2rem;
+        border: none;
+        background: $colorWhite;
+        
+    }
+    input{
+        border-radius: 2rem 0 0 2rem;
+    }
+    button{
+        color: $colorPri;
+        background: $colorWhite;
+        cursor:pointer;
+        transition: all 0.3 ease;
+        border-radius: 0 2rem 2rem 0;
+        
+        &:hover{
+            background: $colorPri;
+            color: $colorWhite;
+        }
+    }
+
+
+    //Filter
+    .select{
+        margin: 1rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 2rem 0 0 2rem;
+        
+        select{
+            color: $colorPri;
+            width:10rem;
+            cursor:pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline:none;
+            border: none;
+            padding: 1rem;
+        }
+        &:hover::after{
+                background-color: $colorWhite;
+                color: $colorPri;
+        }
+        &::after{
+            content: "\25BC";
+            position: absolute;
+            background: $colorPri;
+            top: -0.5rem;
+            right: 0;
+            padding:1rem;
+            pointer-events: none;
+        }
+    }
+}
+
+.intro{
+    flex-direction: column;
+    text-align: center;
+    input{
+        color: $colorPri;
+        border-radius: 2rem;
+        padding: 15px;
+    }
+    button{
+        border-radius: 2rem;
+        margin: 20px;
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+        &:hover{
+            background: linear-gradient(120deg, #00dbde 50%, #fc00ff); ;
+        }
+    }
+}
+
+//Formatting the ToDo
+.todo{
+    margin: .5rem;
+    background-color: $colorWhite;
+    color: $colorBlack;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+    border-radius: 2rem 0 0 2rem;
+    @include flex-c();
+
+    li{
+        flex: 1;
+        padding-left: 1rem;
+    }
+    &-container{
+        @include flex-c();
+    }
+    &-list{
+        min-width:30%;
+        list-style: none;
+    }
+    
+    
+}
+.delete-btn, .complete-btn{
+    background: $colorPri;
+    color: $colorWhite;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn{
+    background-color: rgb(73,204,73);
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.75;
+}
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.hidden{
+    display: none;
+}
+
